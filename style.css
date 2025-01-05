@@ -1,0 +1,189 @@
+ *{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1{
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;      /* give line height same as heght to align text vertically center*/
+
+}
+.name{
+ font-weight: bolder;
+
+}
+.choice{
+    height:180px;
+    width:180px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;      
+}
+.choice .label {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.choice:hover{
+cursor: pointer;
+background-color: black;
+
+}
+
+img{
+    height:150px;
+    width:150px;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+.choices{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    margin-top: 5rem;
+   
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+#user-score,#comp-score{
+    font-size: 4rem;
+
+}
+.msg-container{
+    margin-top: 5rem;
+}
+#msg{
+    background-color: #081b31;
+    color:#fff;
+   font-size: 2rem;
+
+   display: inline;
+   padding:1rem;
+   border-radius: 1rem;
+
+}
+.name{
+    font-weight: bolder;
+}
+
+.active{
+    background-color: blue;
+}
+.name{
+    display: none;
+}
+#restart{
+    background-color: #081b31;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+/* Responsive Design for devices with width less than 640px */
+
+@media (max-width: 640px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        height: 5rem;
+        line-height: normal;
+        width: 100vw;
+        padding: 0.5rem;
+        text-wrap: wrap;
+        align-content: center;
+       
+    }
+
+    .choices {
+        height: 50vh;
+        gap: 1rem; /* Reduce gap between choices */
+        margin-top: 2rem;
+        flex-wrap: wrap; /* Ensures elements wrap but stay in row */
+        display: inline-block;
+        
+    }
+
+    .choice {
+        height: 17vh;
+        width: 120px;
+        display:flexbox;
+        flex-direction: column;
+    }
+     
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+.choice.active img{                                 /* changes the border color for small screen */
+    border: 4px solid blue;
+}
+.active{                                            /* changes the color of choice when clicked for large screen  */
+    background-color: transparent;
+}
+.choice:hover{                                   /* changes the color of choice when hovered for large screen stoped in small screen */
+    cursor: none;
+    background-color: transparent;
+    
+    }
+
+
+    .score-board {
+        gap: 2rem;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2rem;
+    }
+
+    #msg {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+        text-wrap: wrap;
+    } 
+    .msg-container{
+        margin-top: 3rem;
+    }
+    .names{                                      
+        display: none;
+    }
+    .name{
+        line-height: 2rem;
+        display: inline-block;    /* changes the look of name from horizontal to vertical*/
+        
+    }
+} 
+
